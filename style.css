@@ -3,17 +3,9 @@
 }
 body {
    font-family: monospace;
-  /* margin: 0;
-  padding: 1rem;
-  background: #f5f6fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; */
 }
 .profile-container {
   padding: 1rem;
-  /* background: #f5f6fa; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +132,10 @@ ul[data-testid] {
   margin: 0;
   padding-left: 1.2rem;
 }
-
+.sidebar img,
+.menu-button img {
+  filter: brightness(0) saturate(100%) invert(0);
+}
 @media (min-width: 700px) {
   .profile-card {
     flex-direction: row;
