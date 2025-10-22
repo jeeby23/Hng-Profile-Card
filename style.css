@@ -1,24 +1,31 @@
- * {
+* {
   box-sizing: border-box;
 }
 body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
+   font-family: monospace;
+  /* margin: 0;
   padding: 1rem;
   background: #f5f6fa;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
-
+.profile-container {
+  padding: 1rem;
+  /* background: #f5f6fa; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
 .profile-card {
   background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   overflow: hidden;
 }
@@ -28,8 +35,9 @@ body {
   align-items: center;
   padding: 1rem;
 }
-.dimension{
-    background-color: #6fa5df;
+.dimension {
+  background-color: #6fa5df;
+  padding: 10px;
 }
 hr {
   border: none;
@@ -49,18 +57,20 @@ hr {
 }
 
 .upload-label {
-  font-size: 0.9rem;
+  font-size: 10px;
   color: #fff;
   cursor: pointer;
-  background-color: #4b7aac;
-  text-decoration: none;
-  padding: 7px;
- border-radius: 30px;
+  background-color: #a8b7cb;
+  padding: 15px;
+  border-radius: 30px;
   text-decoration: none;
 }
 
 .upload-label:focus {
   outline: 2px solid #81b1e3;
+}
+.upload-label:hover {
+  text-decoration: underline;
 }
 
 .hidden {
@@ -74,7 +84,6 @@ hr {
 .info-section h2 {
   margin: 0;
   font-size: 1.5rem;
- 
 }
 
 .info-section p {
@@ -96,7 +105,7 @@ hr {
   margin: 0 0 1rem;
 }
 
-.social-links a {
+.social-links .handle {
   display: inline-block;
   padding: 0.3rem 0.8rem;
   border: 1px solid #ccc;
@@ -107,14 +116,14 @@ hr {
   transition: all 0.2s;
 }
 
-.social-links a:hover,
-.social-links a:focus {
+.social-links .handle:hover,
+.social-links .handle:focus {
   background: #6fa5df;
   color: white;
   border-color: #6fa5df;
   outline: none;
 }
-.hobbies{
+.hobbies {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -127,7 +136,7 @@ section h3 {
   color: #222;
   font-size: 1rem;
 }
-ul[data-testid] { 
+ul[data-testid] {
   margin: 0;
   padding-left: 1.2rem;
 }
@@ -143,7 +152,6 @@ ul[data-testid] {
   .info-section {
     width: 60%;
   }
- 
 }
 @media (max-width: 699px) {
   .info-section h2,
@@ -151,7 +159,6 @@ ul[data-testid] {
     text-align: center;
   }
   .social-links {
-  justify-content: center;
-}
-
+    justify-content: center;
+  }
 }

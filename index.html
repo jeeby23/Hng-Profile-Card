@@ -4,98 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <title>Hng Profile Card</title>
   </head>
   <body>
-    <article data-testid="test-profile-card" class="profile-card">
-      <div class="dimension">
-        <figure class="avatar-section">
-          <img
-            src="img/myself.jpeg"
-            data-testid="test-user-avatar"
-            alt="User avatar"
-            class="avatar"
-          />
+    <nav class="nav-container">
+      <ul class="sidebar">
+        <li class="list" onclick="hideSidebar()">
+          <a class="link" href="#"><img src="assets/close.svg" alt="" /></a>
+        </li>
+        <li class="list"><a href="about.html" class="link">About</a></li>
+        <li class="list"><a href="contact.html" class="link">Contact</a></li>
+        <li class="list"><a href="index.html" class="link">Profile</a></li>
+      </ul>
+      <ul>
+        <li class="list"><a class="link" href="#">Logo</a></li>
+        <li class="list hideOnMobile"><a class="link" href="about.html">About</a></li>
+        <li class="list hideOnMobile"><a class="link" href="contact.html">Contact</a></li>
+        <li class="list hideOnMobile"><a class="link" href="index.html">Go to Profile</a></li>
+        <li class="list menu-button" onclick="showSidebar()">
+          <a href="#"><img src="assets/menu.svg" alt="menu" /></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="profile-container">
+      <article data-testid="test-profile-card" class="profile-card">
+        <div class="dimension">
+          <figure class="avatar-section">
+            <img
+              src="assets/myself.jpeg"
+              data-testid="test-user-avatar"
+              alt="User avatar"
+              class="avatar"
+            />
 
-          <!-- <figcaption class="user-only">User Avatar</figcaption> -->
+            <div class="upload-controls">
+              <label for="avatar-upload" class="upload-label" tabindex="0">Upload Avatar</label>
+              <input id="avatar-upload" type="file" accept="images/*" class="hidden" />
+            </div>
+          </figure>
+        </div>
+        <div class="info-section">
+          <header>
+            <h2 data-testid="test-user-name">Abdulrahman mujeeb</h2>
+          </header>
 
-          <div class="upload-controls">
-            <label for="avatar-upload" class="upload-label" tabindex="0">Upload Avatar</label>
-            <input id="avatar-upload" type="file" accept="images/*" class="hidden" />
+          <p data-testid="test-user-bio">
+            I'm a passionate frontend web developer with a love for crafting beautiful and
+            functional user interfaces. I enjoy working with modern web technologies and am always
+            eager to learn more.
+          </p>
+
+          <hr />
+          <div class="hobbies">
+            <section>
+              <h3>Hobbies</h3>
+              <ul data-testid="test-user-hobbies">
+                <li>Swimming</li>
+                <li>Coding</li>
+                <li>Reading</li>
+                <li>Gaming</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Dislikes</h3>
+              <ul data-testid="test-user-dislikes">
+                <li>Clubbing</li>
+                <li>Procastinating</li>
+                <li>Slow wifi</li>
+                <li>Negativity</li>
+              </ul>
+            </section>
           </div>
-        </figure>
-      </div>
-      <div class="info-section">
-        <header>
-          <h2 data-testid="test-user-name">Mujeeb shola</h2>
-        </header>
+          <div class="time-section">
+            <strong>Current time (ms):</strong>
+            <span data-testid="test-user-time" id="currentTime"></span>
+          </div>
 
-        <p data-testid="test-user-bio">
-          I'm a passionate frontend web developer with a love for crafting beautiful and functional
-          user interfaces. I enjoy working with modern web technologies and am always eager to learn
-          more.
-        </p>
-
-        <hr />
-        <div class="hobbies">
-          <section>
-            <h3>Hobbies</h3>
-            <ul data-testid="test-user-hobbies">
-              <li>Swimming</li>
-              <li>Coding</li>
-              <li>Reading</li>
-              <li>Gaming</li>
+          <nav aria-label="Social links" data-testid="test-user-social-links">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://x.com/jeeby_xo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="handle"
+                  data-testid="test-user-social-twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/abdulrahman-mujeeb-b2b5b126a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="handle"
+                  data-testid="test-user-social-linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/jeeby23/jeeby/blob/main/README.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="handle"
+                  data-testid="test-user-social-github"
+                  >Github</a
+                >
+              </li>
             </ul>
-          </section>
-
-          <section>
-            <h3>Dislikes</h3>
-            <ul data-testid="test-user-dislikes">
-              <li>Clubbing</li>
-              <li>Procastinating</li>
-              <li>Slow wifi</li>
-              <li>Negativity</li>
-            </ul>
-          </section>
+          </nav>
         </div>
-        <div class="time-section">
-          <strong>Current time (ms):</strong>
-          <span data-testid="test-user-time" id="currentTime"></span>
-        </div>
-
-        <nav aria-label="Social links" data-testid="test-user-social-links">
-          <ul class="social-links">
-            <li>
-              <a
-                href="https://x.com/jeeby_xo"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-twitter"
-                >Twitter</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/abdulrahman-mujeeb-b2b5b126a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-linkedin"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/jeeby23/jeeby/blob/main/README.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="test-user-social-github"
-                >Github</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </article>
-    <script src="script.js"></script>
+      </article>
+    </div>
+    <script src="profile.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

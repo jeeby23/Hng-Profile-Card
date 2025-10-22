@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <ul class="sidebar">
+        <li class="list" onclick="hideSidebar()">
+          <a class="link" href="#"><img src="assets/close.svg" alt="" /></a>
+        </li>
+       
+        <li class="list"><a href="about.html" class="link">About</a></li>
+        <li class="list"><a href="contact.html" class="link">Contact</a></li>
+        <li class="list"><a href="index.html" class="link">Profile</a></li>
+      </ul>
+      <ul>
+        <li class="list"><a class="link" href="#">Logo</a></li>
+        
+        <li class="list hideOnMobile"><a class="link" href="about.html">About</a></li>
+        <li class="list hideOnMobile"><a class="link" href="contact.html">Contact</a></li>
+        <li class="list hideOnMobile"><a class="link" href="index.html">Go to Profile</a></li>
+        <li class="list menu-button" onclick="showSidebar()">
+          <a href="#"><img src="assets/menu.svg" alt="menu" /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <main data-testid="test-about-page">
+      <header class="about-header">
+        <h1>About Me</h1>
+      </header>
+
+      <section data-testid="test-about-bio">
+        <h2>Bio</h2>
+        <p>
+          I'm Abdulrahman mujeeb, a passionate frontend developer in training who loves turning
+          ideas into interactive digital experiences. I enjoy learning how design and code work
+          together to make the web beautiful and accessible for everyone.
+        </p>
+      </section>
+
+      <section data-testid="test-about-goals">
+        <h2>Goals in this Program</h2>
+        <ul>
+          <li>Master responsive web design and accessibility</li>
+          <li>Build real-world projects using semantic HTML, CSS, and JavaScript</li>
+          <li>Collaborate effectively with other developers</li>
+          <li>Create maintainable and scalable code</li>
+        </ul>
+      </section>
+
+      <section data-testid="test-about-confidence">
+        <h2>Areas of Low Confidence</h2>
+        <ul>
+
+            <li>
+              I’m still building confidence in advanced JavaScript concepts and debugging complex code.
+              With consistent practice, I’m determined to improve.
+            </li>
+            <li>Advanced CSS animations and transitions</li>
+            <li>Backend integration and API design</li>
+            <li>Performance optimization techniques</li>
+        </ul>
+      </section>
+
+      <section data-testid="test-about-future-note">
+        <h2>Note to Future Self</h2>
+        <p>
+          Keep pushing, keep learning, and remember how far you’ve come. The journey might be tough,
+          but every step takes you closer to mastery.
+        </p>
+      </section>
+
+      <section data-testid="test-about-extra">
+        <h2>Extra Thoughts</h2>
+        <p>
+          I believe the web is more than code — it’s creativity, inclusivity, and connection.
+          Building with empathy is my ultimate goal.
+        </p>
+      </section>
+    </main>
+    <script src="navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <ul class="sidebar">
+        <li class="list"  onclick="hideSidebar()">
+          <a class="link" href="#"><img src="assets/close.svg" alt="" /></a>
+        </li>
+        
+        <li class="list"><a href="about.html" class="link">About</a></li>
+        <li class="list"><a href="contact.html" class="link">Contact</a></li>
+        <li class="list"><a href="index.html" class="link">Profile</a></li>
+      </ul>
+      <ul>
+        <li class="list"><a class="link" href="#">Logo</a></li>
+        <li class="list hideOnMobile"><a class="link" href="about.html">About</a></li>
+        <li class="list hideOnMobile"><a class="link" href="contact.html">Contact</a></li>
+        <li class="list hideOnMobile"><a class="link" href="index.html">Go to Profile</a></li>
+        <li class="list menu-button" onclick="showSidebar()">
+          <a href="#"><img src="assets/menu.svg" alt="menu" /></a>
+        </li>
+      </ul>
+   <main>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <p>Any question? We would be happy to help you.</p>
+      <address>
+        <p>📞 +234 9167 63 0409</p>
+        <p>✉️ shola.mujeeb@gmail.com</p>
+        <p>📍 23,Marshy hill estate</p>
+      </address>
+    </div>
+
+    <div class="contact-form">
+      <form id="contactForm" novalidate>
+        <div>
+          <label for="name">Full Name</label>
+          <input
+            id="name"
+            data-testid="test-contact-name"
+            type="text"
+            required
+            aria-describedby="error-name"
+            placeholder="Your Name"
+          />
+          <p
+            id="error-name"
+            data-testid="test-contact-error-name"
+            class="error"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            data-testid="test-contact-email"
+            type="email"
+            placeholder="youremail@email.com"
+            required
+            aria-describedby="error-email"
+          />
+          <p
+            id="error-email"
+            data-testid="test-contact-error-email"
+            class="error"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            data-testid="test-contact-subject"
+            type="text"
+            placeholder="Your subject"
+            required
+            aria-describedby="error-subject"
+          />
+          <p
+            id="error-subject"
+            data-testid="test-contact-error-subject"
+            class="error"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            data-testid="test-contact-message"
+            rows="5"
+            required
+            placeholder="Type your message here..."
+            aria-describedby="error-message"
+          ></textarea>
+          <p
+            id="error-message"
+            data-testid="test-contact-error-message"
+            class="error"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <button type="submit" data-testid="test-contact-submit">Submit</button>
+        <p
+          id="success"
+          data-testid="test-contact-success"
+          class="success"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+  </div>
+</main>
+    <script src="contact.js"></script>
+    <script src="navbar.js"></script>
+  </body>
+</html>
